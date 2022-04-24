@@ -27,7 +27,10 @@ public class Calculator {
         } else {
             throw new IllegalArgumentException("Ошибка!!! Используются одновременно разные системы счисления");
         }
-
+        
+        if ((this.firstArgument>10 || this.firstArgument<1) || (this.secondArgument>10 || this.secondArgument<1) ) {
+            throw new IllegalArgumentException("Введенное число должно быть в диапазоне от 1 до 10");
+        }
 
         this.operationn = analyze.getOperation(0);
 
